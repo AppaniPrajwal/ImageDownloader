@@ -1,0 +1,48 @@
+body{
+            background-image: url(images/homebackground.jpg);
+             background-size: auto;          
+            background-repeat: no-repeat;    
+            background-position: center;    
+            height: 100vh;                   
+             margin: 0;
+             overflow: hidden;
+        }
+#typewriter,#typewriter2{
+    margin: 50px;
+    color: aliceblue;
+}
+#imagecontainer{
+    margin: 60px;
+     height: 50vh;
+    width: 30vw;
+}
+#imagecontainer img{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+     background-position: center;
+    background-repeat: no-repeat;
+    animation: shake 2s infinite;
+    border: 2px solid grey;
+    border-radius: 10%;
+}
+@keyframes shake{
+  0%   { transform: translate(0, 0); }
+  20%  { transform: translate(-5px, -5px); }
+  40%  { transform: translate(5px, 5px); }
+  60%  { transform: translate(-5px, 5px); }
+  80%  { transform: translate(5px, -5px); }
+  100% { transform: translate(0, 0); }
+}
+@media (max-width:768px){
+    #imagecontainer{
+        margin: 3vw;
+        height: 40vh;
+        width: 70vw;
+
+    }
+    #typewriter,#typewriter2{
+    margin: 2vh;
+    font-size: 5vw;
+}
+}

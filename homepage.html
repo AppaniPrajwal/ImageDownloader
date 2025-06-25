@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+    <h1 id="typewriter"></h1>
+    <div id="imagecontainer"></div>
+    <h1 id="typewriter2"></h1>
+</body>
+<script>
+    let typing=document.getElementById("typewriter");
+    let content="Welcome to PhotoGallery";
+    function typeletter(){
+        typing.innerHTML=content;
+    }
+    let typing2=document.getElementById("typewriter2");
+    let content2="Capturing the world through my lens...";
+    function typeletter2(){
+        typing2.innerHTML=content2;
+    }
+    function imageload(){
+        let imagecontainer=document.getElementById("imagecontainer");
+        const img=new Image();
+        img.src="images/homepagebg2.jpeg";
+         imagecontainer.appendChild(img);
+    }
+    setTimeout(typeletter,500);
+    setTimeout(typeletter2,500);
+    setTimeout(imageload,500);
+</script>
+</html>
