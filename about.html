@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+     <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <div id="back-btn">
+  <button id="back"><a href="mywebsite.html" id="back">Back</a></button>
+</div>
+    <br><br><br>
+    <h1 id="typewriter"></h1>
+    <div id="outer">
+        <div id="image-container"></div>
+        <div id="pagecontent"></div>
+    </div>
+</body>
+<script>
+
+    let content="Hello This is Prajwal...";
+    let target=document.getElementById('typewriter');
+    let i=0;
+    let flag=false;
+    function typewriter(){
+            if(i<content.length){
+                target.innerHTML+=content.charAt(i);
+            i++;
+            setTimeout(typewriter,100);
+            }
+            else{
+                i=0;
+                 setTimeout(typewriter2,3000);
+            }
+    }
+    setTimeout(typewriter,500);
+   
+       const imageContainer = document.getElementById("image-container");
+
+const imageUrl = "images/Prajwal_.jpg";
+setTimeout(() => {
+  const img = new Image();
+  img.src = imageUrl;
+  img.onload = () => {
+    img.classList.add('loaded'); 
+  };
+  imageContainer.appendChild(img);
+}, 4500);
+    content1="Welcome to the gallery! Welcome to the gallery — a space where moments, stories, and creativity come together in visual harmony. This collection is more than just a series of images; it's a journey through inspiration, passion, and thoughtful expression. Each photograph has been carefully chosen not only for its visual appeal but also for the emotions it conveys and the story it tells. Whether captured in the quiet stillness of nature, the vibrance of everyday life, or the excitement of a special moment, these images serve as snapshots of meaning and memory.We believe that visuals can speak in ways words often cannot. They can capture fleeting seconds, preserve beauty, and convey feelings across time and space. In this gallery, you’ll find a blend of personal moments and creative works — scenes that reflect our style, values, and vision. From the play of light and shadow to the colors that breathe life into each frame, every element has its place and purpose.You may notice how some images evoke calm and peace, while others burst with energy and movement. That’s intentional. Life is a mix of contrasts, and our gallery embraces this duality. It celebrates the quiet and the loud, the simple and the complex, the planned and the spontaneous. It is our way of expressing how we see the world — not just with our eyes, but with imagination and heart.Take your time as you explore. Let each image draw you in. Notice the details, the compositions, and the mood. Whether you're here out of curiosity, for inspiration, or simply to enjoy beautiful imagery, we’re glad you’ve found your way to this corner of the web. This gallery is a living space, ever-growing and evolving, just like creativity itself. We hope it leaves you feeling inspired, uplifted, and more connected to the beauty that surrounds us every day. space is a reflection of creativity, inspiration, and thoughtful expression. Each image you see has been carefully selected to represent our unique perspective and style. From vibrant moments to subtle details, every photo tells a story worth exploring. Whether it’s a captured memory, a work of art, or a behind-the-scenes glimpse, the gallery offers a window into our creative journey. We believe in the power of visuals to connect, communicate, and inspire. Through these images, we aim to evoke emotion and spark curiosity. Take your time browsing through the collection and discover the meaning behind each frame. Let the colors, textures, and compositions speak to you. We hope this visual experience leaves you feeling inspired and connected.";
+    target1=document.getElementById('pagecontent');
+    function typewriter2(){
+           target1.innerHTML=content1;
+    }
+</script>
+
+</html>

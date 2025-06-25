@@ -1,0 +1,45 @@
+ body{
+    background-image: url(images/contactbackground.jpg);
+ }
+#back{
+    color: aliceblue;
+  text-decoration: none;
+  font-size: 20px;          
+  background-color: #264653;
+  padding: 5px 10px;       
+  border-radius: 10%;
+    }
+#back-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+ a{
+        color: aliceblue;
+        text-decoration: none;
+    }
+h1{
+    color: aliceblue;
+}
+i{
+    color: aliceblue;
+}
+.outer{
+    margin: 50px;
+    color: aliceblue;
+}
+.inner{
+    font-size: 40px;
+}
+.outer{
+    display: none;
+}
+@media (max-width:768px){
+    .outer{
+        margin: 2vw;
+    }
+    #back{
+         font-size: 4vw;
+        padding: 1vw 2vw;
+    }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Centered Download Button</title>
+  <link rel="stylesheet" href="download.css">
+</head>
+<body>
+  <div id="back-btn">
+    <a id="back" href="gallery.html">Back</a>
+  </div>
+
+  <div class="center-container">
+    <a id="download" href="" download>Download Now</a>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("filename");
+    const downloadLink = document.getElementById("download");
+
+    if (name) {
+      document.body.style.backgroundImage = `url('${name}')`;
+      downloadLink.href = name;
+      downloadLink.style.display = "inline-block";
+    }
+  </script>
+</body>
+</html>
